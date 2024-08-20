@@ -1,10 +1,12 @@
 <script setup lang="ts">
-// import { RouterLink, RouterView } from 'vue-router'
-import AppHeader from './components/header/AppHeader.vue'
+import { RouterView } from 'vue-router'
 import AppNav from './components/nav/AppNav.vue'
+import AppScaffold from './components/scaffold/AppScaffold.vue'
 </script>
 
 <template>
   <AppNav></AppNav>
-  <AppHeader></AppHeader>
+  <AppScaffold>
+    <RouterView></RouterView>
+  </AppScaffold>
 </template>

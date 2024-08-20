@@ -5,9 +5,11 @@ import AppNavSection from './AppNavSection.vue'
 import AppNavSectionItem from './AppNavSectionItem.vue'
 import { computed, shallowRef } from 'vue'
 import { useClickOutside } from '@/core/use/useClickOutside'
+import { useUserStore } from '@/stores/user'
 const store = useAppStore()
 const isExpanded = computed(() => ({ expanded: store.menuExpanded }))
 const el = shallowRef<HTMLElement>()
+const user = useUserStore()
 useClickOutside({
   el,
   onClick() {
@@ -17,7 +19,7 @@ useClickOutside({
 </script>
 
 <template>
-  <nav ref="el" :class="isExpanded" aria-label="Menu de Navegação">
+  <nav v-if="user.isLoggedIn" ref="el" :class="isExpanded" aria-label="Menu de Navegação">
     <div v-once>
       <AppNavHeader title="Olá, Jonathan" sub-title="jonathan.v.peixoto@gmail.com"></AppNavHeader>
       <AppNavSection title="Conta">
