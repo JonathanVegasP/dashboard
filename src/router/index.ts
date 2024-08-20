@@ -4,7 +4,7 @@ import LoginView from '@/views/LoginView.vue'
 import { useUserStore } from '@/stores/user'
 
 const router = createRouter({
-  history: createWebHistory('/dashboard/dist/'),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/login',

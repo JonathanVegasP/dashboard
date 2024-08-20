@@ -10,12 +10,23 @@ export default defineConfig({
     vue(),
     vueJsx(),
     VitePWA({
-      base: '/dashboard/dist/'
+      base: '/dashboard/dist/',
+      registerType: 'autoUpdate',
+      manifest: {
+        name: 'Dashboard',
+        short_name: 'Dashboard',
+        description: 'Dashboard',
+        background_color: '#000000',
+        theme_color: '#000000',
+        lang: 'pt-BR',
+        categories: ['Dashboard']
+      }
     })
   ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  base: '/dashboard/dist/'
 })
