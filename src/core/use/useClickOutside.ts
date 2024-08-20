@@ -4,7 +4,7 @@ import type { ClickOutsideType } from '../types/ClickOutisdeType'
 export const useClickOutside = ({ el, onClick }: ClickOutsideType) => {
   const callback = (event: Event) => {
     const target = event.target || event.currentTarget
-    if (!el.value!.contains(target as Node)) {
+    if (!el.value?.contains(target as Node)) {
       onClick()
     }
   }
