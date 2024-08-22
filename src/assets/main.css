@@ -40,8 +40,72 @@
   align-items: flex-end;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.p-05 {
+  padding: 0.5rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.mr-1 {
+  margin-right: 1rem;
+}
+
+.br-025 {
+  border-radius: 0.25rem;
+}
+
+.br-50 {
+  border-radius: 50%;
+}
+
+.b-none {
+  border: none;
+}
+
+.bg-primary {
+  background-color: white;
+}
+
+.bg-hover-primary:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.color-primary {
+  color: black;
+}
+
+.bg-secondary {
+  background-color: black;
+}
+
+.bg-hover-secondary:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.color-secondary {
+  background-color: white;
+}
+
+.bg-none {
+  background-color: transparent;
+}
+
 .shadow {
   box-shadow:
     rgba(0, 0, 0, 0.12) 0px 1px 3px,
     rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.transition-02 {
+  transition: all 0.2s ease-out;
 }

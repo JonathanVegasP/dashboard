@@ -24,6 +24,9 @@ body {
   align-items: start;
 }
 
+fieldset,
+input,
+label,
 form {
   background-color: inherit;
 }
