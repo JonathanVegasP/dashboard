@@ -6,7 +6,7 @@ const isExpanded = ref(false)
 const collapsible = shallowRef<HTMLDivElement>()
 const isActive = computed(() => ({
   'on-background-active-secondary': isExpanded.value,
-  'border-top-radius-025': isExpanded.value
+  'border-bottom-radius-0': isExpanded.value
 }))
 const rotate = computed(() => ({ 'rotate-deg-180': isExpanded.value }))
 const onClick = () => {

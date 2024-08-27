@@ -105,6 +105,10 @@
   background-color: transparent;
 }
 
+.color-none {
+  color: transparent;
+}
+
 .shadow {
   box-shadow:
     rgba(0, 0, 0, 0.12) 0px 1px 3px,
