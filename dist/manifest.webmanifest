@@ -1,1 +1,1 @@
-{"name":"web","short_name":"web","start_url":"/dashboard/dist/","display":"standalone","background_color":"#ffffff","lang":"en","scope":"/dashboard/dist/"}
+{"name":"Dashboard","short_name":"Dashboard","start_url":"/dashboard/dist/","display":"standalone","background_color":"#000000","lang":"pt-BR","scope":"/dashboard/dist/","description":"Dashboard","theme_color":"#000000","categories":["Dashboard"]}
