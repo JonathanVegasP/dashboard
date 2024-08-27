@@ -16,7 +16,10 @@ describe('AppNav', () => {
             createSpy: vi.fn,
             stubActions: false,
             initialState: {
-              app: { menuExpanded: true }
+              app: { menuExpanded: true },
+              user: {
+                user: { isLoggedIn: true }
+              }
             }
           })
         ]
@@ -31,13 +34,13 @@ describe('AppNav', () => {
   it('renders properly', () => {
     expect(wrapper.exists()).toBeTruthy()
     expect(wrapper.html()).toContain('<nav')
-    expect(wrapper.classes()).toContain('expanded')
+    expect(wrapper.classes()).toContain('w-min-240')
   })
 
   it('should collapse', async () => {
     const store = useAppStore()
     store.toggleMenu()
     await nextTick()
-    expect(wrapper.classes()).not.toContain('expanded')
+    expect(wrapper.classes()).not.toContain('w-min-240')
   })
 })

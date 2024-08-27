@@ -5,19 +5,8 @@ const store = useUserStore()
 </script>
 
 <template>
-  <div>
+  <div class="flex col grow height-100 overflow-auto overflow-margin-025">
     <AppHeader v-if="store.isLoggedIn"></AppHeader>
     <slot></slot>
   </div>
 </template>
-
-<style scoped>
-div {
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
-  overflow-clip-margin: 3px;
-  flex-grow: 1;
-  height: 100%;
-}
-</style>

@@ -15,11 +15,11 @@ describe('AppNavSection', () => {
 
   it('renders properly', () => {
     expect(wrapper.exists()).toBeTruthy()
-    expect(wrapper.text()).contain('title')
+    expect(wrapper.text()).toContain('title')
   })
 
   it('should expand', async () => {
     await wrapper.find('button').trigger('click')
-    expect(wrapper.find('button').classes()).contain('active')
+    expect(wrapper.find('button').classes()).toContain('on-bg-active-secondary')
   })
 })

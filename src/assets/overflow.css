@@ -1,0 +1,11 @@
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-none {
+  overflow: hidden;
+}
+
+.overflow-margin-025 {
+  overflow-clip-margin: 0.25rem;
+}

@@ -22,7 +22,7 @@ describe('completer', () => {
 
     setTimeout(() => {
       c.reject('timeout')
-    }, 500)
+    }, 250)
 
     await expect(c.promise).rejects.toThrowError()
   })

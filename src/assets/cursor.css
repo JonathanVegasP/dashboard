@@ -1,0 +1,7 @@
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-none {
+  pointer-events: none;
+}

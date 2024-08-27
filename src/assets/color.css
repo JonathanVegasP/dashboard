@@ -1,0 +1,112 @@
+:root {
+  /* background */
+  --primary-color: white;
+  /* outline or border */
+  --primary-surface-color: rgba(0, 0, 0, 0.5);
+  /* text */
+  --primary-surface-text-color: rgba(0, 0, 0, 0.9);
+  /* outline or border active or hover */
+  --primary-surface-active-color: black;
+  /* inside background */
+  --on-primary-color: rgba(0, 0, 0, 0.2);
+  /* inside background with interactions */
+  --on-primary-hover-color: rgba(0, 0, 0, 0.4);
+  /* inside background with interactions*/
+  --on-primary-active-color: rgba(0, 0, 0, 0.3);
+  --secondary-color: black;
+  --secondary-surface-color: rgba(255, 255, 255, 0.5);
+  --secondary-surface-text-color: rgba(255, 255, 255, 0.9);
+  --secondary-surface-active-color: white;
+  --on-secondary-color: rgba(255, 255, 255, 0.2);
+  --on-secondary-hover-color: rgba(255, 255, 255, 0.4);
+  --on-secondary-active-color: rgba(255, 255, 255, 0.3);
+  --grey-color: #808080;
+}
+
+.border-none {
+  border: none;
+}
+
+.outline-none {
+  outline: none;
+}
+
+.outline-primary {
+  outline: 1px solid var(--primary-surface-color);
+}
+
+.hover .outline-primary:hover {
+  outline: 2px solid var(--primary-surface-active-color);
+}
+
+.outline-primary:focus {
+  outline: 2px solid var(--primary-surface-active-color);
+}
+
+.outline-secondary {
+  outline: 1px solid var(--secondary-surface-color);
+}
+
+.hover .outline-secondary:hover {
+  outline: 2px solid var(--secondary-surface-active-color);
+}
+
+.outline-secondary:focus {
+  outline: 2px solid var(--secondary-surface-active-color);
+}
+
+.background-primary {
+  background-color: var(--primary-color);
+}
+
+.on-background-primary {
+  background-color: var(--on-primary-color);
+}
+
+.hover .on-background-hover-primary:hover,
+.on-background-hover-primary:active {
+  background-color: var(--on-primary-hover-color);
+}
+
+.on-background-active-primary {
+  background-color: var(--on-primary-active-color);
+}
+
+.color-primary {
+  color: var(--primary-surface-text-color);
+}
+
+.background-secondary {
+  background-color: var(--secondary-color);
+}
+
+.on-background-secondary {
+  background-color: var(--on-secondary-color);
+}
+
+.hover .on-background-hover-secondary:hover,
+.on-background-hover-secondary:active {
+  background-color: var(--on-secondary-hover-color);
+}
+
+.on-background-active-secondary {
+  background-color: var(--on-secondary-active-color);
+}
+
+.background-grey {
+  background-color: var(--grey-color);
+}
+
+.color-secondary {
+  color: var(--secondary-surface-text-color);
+}
+
+.background-none {
+  background-color: transparent;
+}
+
+.shadow {
+  box-shadow:
+    rgba(0, 0, 0, 0.12) 0px 1px 3px,
+    rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}

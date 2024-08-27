@@ -3,36 +3,15 @@ const { title, subTitle } = defineProps<{ title?: string; subTitle?: string }>()
 </script>
 
 <template>
-  <section aria-label="Dados da Conta">
-    <i class="material-icons" aria-label="Foto da Conta">person</i>
-    <div>
-      <h5>{{ title }}</h5>
-      <h6>{{ subTitle }}</h6>
+  <section aria-label="Dados da Conta" class="flex cross-center padding-1 margin-bottom-1">
+    <i
+      class="material-icons background-grey padding-05 margin-right-05 border-radius-rounded"
+      aria-label="Foto da Conta"
+      >person</i
+    >
+    <div class="min-width-0">
+      <h5 class="text-nowrap">{{ title }}</h5>
+      <h6 class="text-nowrap">{{ subTitle }}</h6>
     </div>
   </section>
 </template>
-
-<style scoped>
-h5,
-h6 {
-  overflow: hidden;
-  white-space: nowrap;
-}
-div {
-  min-width: 0;
-}
-section {
-  padding: 1rem;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-}
-
-i {
-  padding: 0.5rem;
-  border-radius: 50%;
-  margin-right: 0.5rem;
-  color: white;
-  background-color: #ccc;
-}
-</style>

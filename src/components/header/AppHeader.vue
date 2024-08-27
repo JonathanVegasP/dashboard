@@ -4,54 +4,20 @@ const store = useAppStore()
 </script>
 
 <template>
-  <header aria-label="Cabeçalho">
+  <header
+    class="flex main-start cross-center padding-1 background-secondary color-secondary shadow"
+    aria-label="Cabeçalho"
+  >
     <button
       v-if="store.isTablet"
       type="button"
       aria-label="Expandir Menu Lateral"
       :aria-expanded="store.menuExpanded"
       @click.stop="store.toggleMenu"
-      class="material-icons"
+      class="material-icons cursor-pointer padding-05 margin-right-1 border-radius-rounded border-none background-none on-background-hover-secondary color-secondary transition-02"
     >
       menu
     </button>
-    <h1 v-once>Dashboard</h1>
+    <h3 v-once>Dashboard</h3>
   </header>
 </template>
-
-<style scoped>
-header {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  padding: 1rem;
-  background-color: white;
-  color: black;
-  box-shadow:
-    rgba(0, 0, 0, 0.12) 0px 1px 3px,
-    rgba(0, 0, 0, 0.24) 0px 1px 2px;
-}
-
-ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  list-style-type: none;
-  padding: 0;
-}
-
-button {
-  cursor: pointer;
-  color: black;
-  background-color: transparent;
-  border-radius: 50%;
-  padding: 0.5rem;
-  border: none;
-  margin-right: 1rem;
-  transition: background-color 0.2s ease-out;
-}
-
-button:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-</style>

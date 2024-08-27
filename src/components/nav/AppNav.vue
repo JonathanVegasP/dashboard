@@ -7,7 +7,10 @@ import { computed, shallowRef } from 'vue'
 import { useClickOutside } from '@/core/use/useClickOutside'
 import { useUserStore } from '@/stores/user'
 const store = useAppStore()
-const isExpanded = computed(() => ({ expanded: store.menuExpanded }))
+const isExpanded = computed(() => ({
+  'min-width-240': store.menuExpanded,
+  'max-width-240': store.menuExpanded
+}))
 const el = shallowRef<HTMLElement>()
 const user = useUserStore()
 useClickOutside({
@@ -19,7 +22,13 @@ useClickOutside({
 </script>
 
 <template>
-  <nav v-if="user.isLoggedIn" ref="el" :class="isExpanded" aria-label="Menu de Navegação">
+  <nav
+    v-if="user.isLoggedIn"
+    ref="el"
+    class="overflow-auto background-secondary color-secondary height-100 min-width-0 max-width-0 transition-02"
+    :class="isExpanded"
+    aria-label="Menu de Navegação"
+  >
     <div v-once>
       <AppNavHeader title="Olá, Jonathan" sub-title="jonathan.v.peixoto@gmail.com"></AppNavHeader>
       <AppNavSection title="Conta">
@@ -45,17 +54,3 @@ useClickOutside({
     </div>
   </nav>
 </template>
-
-<style scoped>
-nav {
-  color: white;
-  background-color: black;
-  height: 100%;
-  overflow: auto;
-  width: 0;
-  transition: width 0.2s ease-out;
-}
-nav.expanded {
-  width: 240px;
-}
-</style>
